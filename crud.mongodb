@@ -1,0 +1,39 @@
+//show dbs:
+//show collection:
+// database name;
+//db.createcollection("student");
+//db.cllection name.insertOne({name:"bim",age:22})
+
+use university;
+
+db.createCollection("students");
+db.students.insertOne({
+    id:1,
+    name:"bim",
+    age:22,
+    city:"ktm",
+    depaertment:"cse"
+
+})
+db.students.find();
+
+db.students.updateOne(
+    {name:"bim"},
+
+    {
+        $set:{age:23}
+    }
+)
+
+db.students.updateMany({},{$set:{status:"Active"}})
+
+db.students.deleteOne({id:1})
+
+
+
+
+//git add .
+//git commit -m "message"
+//git push origin main
+//git remote add origin url
+//git push origin master
